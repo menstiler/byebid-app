@@ -13,7 +13,7 @@ Sell and purchase tickets to various events. Have an extra ticket? Sell or aucti
 - JavaScript
 - Rails
 
-### Style
+### Styled with:
 - Materialize
 - Custom CSS
 
