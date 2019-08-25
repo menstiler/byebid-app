@@ -1,0 +1,33 @@
+# Byebid
+
+Sell and purchase tickets to various events. Have an extra ticket? Sell or auction it off and make a profit. Customers will have the option to buy the ticket at a set price or start a bidding war. The app name is a play on the word “byebug” the debugging tool available on rails, the concept being you can either buy or bid for a ticket.
+
+#### User Stories  
+- See tickets available for purchase
+- Sell a ticket
+- Buy a ticket
+- Bid for a ticket
+- See your purchased tickets
+
+### Built with:
+- JavaScript
+- Rails
+
+### Style
+- Materialize
+- Custom CSS
+
+### Demo
+Coming Soon...
+
+##### Byebid Backend:
+https://github.com/menstiler/byebid-backend
+
+In the project directory, you can run:
+
+### `npm start`
+
+Runs the app in the development mode.<br>
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+Built by Mendel Stillerman and David Greenspan
