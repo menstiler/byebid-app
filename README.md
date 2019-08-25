@@ -27,4 +27,5 @@ You are welcome to clone down this repository and in the project directory, you 
 
 ### `open index.html`
 
-Built by Mendel Stillerman and David Greenspan
+Built by [Mendel Stillerman](https://github.com/menstiler) and [David Greenspan](https://github.com/davidgreenspan15)
+
