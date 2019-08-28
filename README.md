@@ -18,7 +18,7 @@ Sell and purchase tickets to various events. Have an extra ticket? Sell or aucti
 - Custom CSS
 
 ### Demo
-Coming Soon...
+http://byebid.surge.sh
 
 ##### Byebid Backend:
 https://github.com/menstiler/byebid-backend
