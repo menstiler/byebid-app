@@ -3,8 +3,8 @@ const mainCategoryContainer = document.querySelector("#main-column")
 let ticketContainer = document.querySelector('#tickets-list')
 const bidForm = document.querySelector('#ticket-form')
 const bidsContainer = document.querySelector('#ticket-bids')
-const ticketsUrl = "http://localhost:3000/tickets"
-const usersUrl = "http://localhost:3000/users"
+const ticketsUrl = "https://dry-spire-94312.herokuapp.com/tickets"
+const usersUrl = "https://dry-spire-94312.herokuapp.com/users"
 const ticketInfo = document.querySelector('#ticket-info')
 const ticketInfoContainer = document.querySelector('#ticket-container')
 let ticketArray = []
@@ -166,14 +166,14 @@ function findBidWinner(ticket) {
 
 function addCashToSeller(ticket) {
   let sellerCash
-  fetch(`http://localhost:3000/users/${ticket.seller_id}`)
+  fetch(`https://dry-spire-94312.herokuapp.com/users/${ticket.seller_id}`)
   .then(resp => resp.json())
   .then(seller => {
     sellerCash = seller.cash
   })
   console.log(sellerCash);
   console.log(sellerCash += ticket.price);
-  // fetch(`http://localhost:3000/users/${ticket.seller_id}`, {
+  // fetch(`https://dry-spire-94312.herokuapp.com/users/${ticket.seller_id}`, {
   //   method: "POST",
   //   headers: {
   //     "Content-Type": "application/json",
@@ -189,7 +189,7 @@ function addCashToSeller(ticket) {
 }
 function bidWin(winner, ticket) {
 
-  fetch("http://localhost:3000/purchases", {
+  fetch("https://dry-spire-94312.herokuapp.com/purchases", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -206,7 +206,7 @@ function bidWin(winner, ticket) {
   .then(json => {
     // console.log(json);
   })
-  fetch(`http://localhost:3000/tickets/${ticket.id}`, {
+  fetch(`https://dry-spire-94312.herokuapp.com/tickets/${ticket.id}`, {
     method: "PATCH",
     headers: {
       "Content-Type": "application/json",
@@ -268,7 +268,7 @@ function signUpPost(signupBtn) {
 
 function fetchAllTicket() {
   ticketArray = []
-  fetch('http://localhost:3000/tickets/all')
+  fetch('https://dry-spire-94312.herokuapp.com/tickets/all')
   .then(r => r.json())
   .then(json => {
     json.forEach(ticket => {
@@ -440,7 +440,7 @@ function renderTicket(ticket) {
 }//render all tickets
 
 function fetchUserTickets() {
-  fetch(`http://localhost:3000/users/username/${currentUser.username}`)
+  fetch(`https://dry-spire-94312.herokuapp.com/users/username/${currentUser.username}`)
   .then(r => r.json())
   .then(user => user.tickets)
   .then(tickets => {
@@ -561,7 +561,7 @@ function placeBid(e, input) {
     const alertTag = bidForm.querySelector('#input-alert')
     alertTag.innerHTML = `Amount must be higher than $${ticketObj.min_price}`
   } else {
-    fetch("http://localhost:3000/bids", {
+    fetch("https://dry-spire-94312.herokuapp.com/bids", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -625,7 +625,7 @@ function buyNow(e){
   let ticketObj = ticketArray.find(function(ticket){ return ticket.id === parseInt(ticketId)})
   ticketObj.status = false
   // addCashToSeller(ticketObj)
-  fetch("http://localhost:3000/purchases", {
+  fetch("https://dry-spire-94312.herokuapp.com/purchases", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -665,7 +665,7 @@ function buyNow(e){
 }
 
 function removeBids(ticketId) {
-  fetch(`http://localhost:3000/bids/${ticketId}`, {
+  fetch(`https://dry-spire-94312.herokuapp.com/bids/${ticketId}`, {
     method: "DELETE"
   })
 }
@@ -714,7 +714,7 @@ function sellTicket(e) {
 }
 
 function deletePurchase(ticketId) {
-  fetch(`http://localhost:3000/purchases/${ticketId}`, {
+  fetch(`https://dry-spire-94312.herokuapp.com/purchases/${ticketId}`, {
     method: "DELETE",
   })
   .then(resp => {
