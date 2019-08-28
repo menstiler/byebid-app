@@ -13,7 +13,7 @@ Sell and purchase tickets to various events. Have an extra ticket? Sell or aucti
 - JavaScript
 - Rails
 
-### Style
+### Styled with:
 - Materialize
 - Custom CSS
 
@@ -23,11 +23,9 @@ Coming Soon...
 ##### Byebid Backend:
 https://github.com/menstiler/byebid-backend
 
-In the project directory, you can run:
+You are welcome to clone down this repository and in the project directory, you can run:
 
-### `npm start`
+### `open index.html`
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Built by [Mendel Stillerman](https://github.com/menstiler) and [David Greenspan](https://github.com/davidgreenspan15)
 
-Built by Mendel Stillerman and David Greenspan
